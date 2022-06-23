@@ -1,0 +1,384 @@
+/* STARTER CODE -- DO NOT DELETE */
+/*	============================================== */
+
+/* colors */
+
+/*
+#5D78AB Dark blue 
+#705D4B Dark brown
+#967658 Light brown
+#87A6BD Mid blue 
+#B7CEDF Light blue 
+*/
+
+/* fonts */
+
+/*
+font-family: 'Gentium Plus', serif;
+font-family: 'Oleo Script', cursive;
+font-family: 'Joan', serif;
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+	margin: 15px;
+}
+
+
+/* ======================== AMANDA'S WORK FOR HOMEWORK 18 ============================== */ 
+
+
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+nav ul {
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+nav ul li { 
+	background-color: #5D78AB; 
+	border-left: .5px solid white; 
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	transition: background-color 300ms ease;
+	width: 100%;
+}
+
+nav ul li:hover {
+	background-color: black;
+}
+
+nav ul li:last-child {
+	border-right: .5px solid white; 
+}
+
+nav ul li a {
+	display: flex;
+	justify-content: center;
+	color: white;
+	text-decoration: none; 
+	font-family: 'Joan', serif;
+	text-transform: uppercase; 
+}
+
+
+/* AVATAR SECTION (haha puns) */
+
+#introductory {
+	display: flex;
+	justify-content: center;
+}
+
+#introductory h1 {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	font-family: 'Oleo Script', cursive;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	animation: spin 1s;
+}
+
+@media screen and (min-width: 800px) {
+	#introductory h1 {
+		font-size: 100px;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(-10deg);
+	}
+	75% {
+		transform: rotate(-5deg);
+	}
+	to {
+		transform: rotate(10deg);
+	}
+}
+
+
+/* animation: bounceHeader .7s infinite;
+
+@keyframes bounceHeader {
+	from {
+		margin-top: 60px;
+	}
+	50% {
+		margin-top: 65px;
+	}
+	to {
+		margin-top: 0px;
+	}
+} */
+
+#introductory img {
+	z-index: -1;
+	width: 100%;
+	filter: brightness(40%);
+}
+
+.section-content-one {
+	background-color: #87A6BD;
+	padding: 50px;
+}
+
+.section-content-one .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-content-one .container h2 {
+	color: white;
+	font-family: 'Oleo Script', cursive;
+	font-size: 40px;
+	text-align: center;
+
+}
+
+.section-content-one .container .lead-in {
+	color: black;
+	font-family: 'Joan', serif;
+	font-size: 20px;
+	text-align: center;
+	font-style: italic;
+
+}
+
+.section-content-one .container p {
+	color: black;
+	font-family: 'Joan', serif;
+	font-size: 20px;
+}
+
+/* ======================== STATS ============================== */ 
+
+.section-content-two .container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.section-content-two .container h2 {
+	color: #5D78AB;
+	font-family: 'Oleo Script', cursive;
+	font-size: 40px;
+	text-align: center;
+}
+
+.stat-list {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+}
+
+@media screen and (min-width: 900px) {
+	.stat-list {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+}
+
+/* still working on this section with the media queries to get the sizing right */
+
+.stat-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #B7CEDF;
+	border: 5px solid #B7CEDF;
+	width: 20%;
+	box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+	transform: scale(1.1);
+	transition: border-radius 300ms ease, transform 300ms ease, background-color 300ms ease;
+}
+
+.stat-item:hover {
+	z-index: 1;
+	border-radius: 0;
+	transform: scale(1) rotate(10deg);
+	border: 5px solid #5D78AB;
+}
+
+.stat-item h3 {
+	justify-content: center;
+	margin: 0;
+	display: flex;
+	padding: 5px;
+	font-size: 20px;
+}
+
+.stat-item p {
+	justify-content: center;
+	font-size: 18px;
+}
+
+/* ======================== HERO INFO ============================== */ 
+
+.section-content-three {
+	background-color: #87A6BD;
+	padding: 5%;
+}
+
+.section-content-three .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-content-three .container h2 {
+	color: white;
+	font-family: 'Oleo Script', cursive;
+	font-size: 40px;
+	text-align: center;
+}
+
+.section-content-three .container .power-list {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+}
+
+.section-content-three .container .power-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #B7CEDF;
+	margin: 20px;
+	border-radius: 10%;
+	transition: transform 300ms ease
+}
+
+.section-content-three .container .power-item:hover {
+	transform: scale(1.1);
+	border-radius: 20px;
+}
+
+.section-content-three .container h3 {
+	justify-content: center;
+	margin: 10;
+	display: flex;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.section-content-three .container .power-item p {
+	color: black;
+	font-family: 'Joan', serif;
+	font-size: 20px;
+	margin: 0px 20px 30px 20px;
+}
+
+/* ======================== SWATCHES ============================== */ 
+
+/* #5D78AB Dark blue 
+#87A6BD Mid blue 
+#B7CEDF Light blue  */
+
+.section-content-four .container {
+	margin-bottom: 30px;
+}
+
+.section-content-four .container h2 {
+	color: #5D78AB;
+	font-family: 'Oleo Script', cursive;
+	font-size: 40px;
+	text-align: center;
+}
+
+.swatch-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: space-evenly;
+	width: 100%;
+}
+
+.swatch-item {
+	width: calc(20% - 1rem);
+	padding: .5rem;
+	margin: .5rem;
+	background: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 5px 5px 19px 5px rgba(.3,0,0,.3);
+	transition: transform 300ms ease
+}
+
+.swatch-item:hover {
+	transform: scale(1.1);
+}
+
+.swatch-sample {
+	height: 100px;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+
+.swatch-hex {
+	padding: .5rem 0 0;
+	text-align: center;
+}
+
+.swatch-sample--one {
+	background-color: #5D78AB;
+}
+
+.swatch-sample--two {
+	background-color: #87A6BD;
+}
+
+.swatch-sample--three {
+	background-color: #B7CEDF;
+}
+
+
+
+/* ======================== QUOTE ============================== */ 
+
+.quoteContent {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.quoteContent img {
+	filter: brightness(30%);
+}
+
+.centerText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Oleo Script', cursive;
+	font-size: 25px;
+
+}
+
+@media screen and (min-width: 800px) {
+	.centerText {
+		font-size: 40px;
+	}
+}
